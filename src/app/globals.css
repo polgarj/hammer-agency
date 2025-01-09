@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  /* Navigation */
+  .navigation-item {
+    @apply text-white text-[11px] text-center flex w-full h-[75px] flex-col justify-center items-center hover:bg-[#8A38F5];
+
+    &[aria-current] {
+      @apply bg-[#8A38F5];
+    }
+
+    img {
+      @apply mb-2;
+    }
+  }
+}
