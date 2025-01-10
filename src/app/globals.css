@@ -15,4 +15,12 @@
       @apply mb-2;
     }
   }
+
+  .h1 {
+    @apply font-semibold text-white text-[35px] leading-none ml-[14px];
+  }
+
+  .main-container {
+    @apply mt-[89px] ml-[159px] mr-[120px] bg-[#2F1255] bg-opacity-30 rounded-[20px] pt-7 px-[15px] pb-[65px];
+  }
 }

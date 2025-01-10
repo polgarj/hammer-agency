@@ -1,11 +1,12 @@
 import React from 'react'
+import Image from 'next/image'
 
 const UserMenu = () => {
   return (
-    <ul className='fixed top-0 right-0 flex'>
-      <li><a href="#">Notifications</a></li>
-      <li><a href="#">Account Name Profile picture</a></li>
-    </ul>
+    <div className='ml-auto mt-[29px] mr-[31px] flex items-center absolute top-0 right-0'>
+      <button className='grid place-items-center mr-4 w-[30px] h-[30px] rounded-full bg-[#2F1255] bg-opacity-30 hover:bg-opacity-50 transition-all' aria-label="notifications"><Image src="/icons/notification.svg" alt="" width={14} height={16} /></button>
+      <button className='flex items-center flex-nowrap text-white'>Account Name <Image className='ml-4' src="/account.png" alt="" width={45} height={45} /></button>
+    </div>
   )
 }
 

@@ -18,7 +18,7 @@ const Navigation = () => {
 				<li className="w-full flex flex-col items-center mb-7">
 					<Link
 						className="mt-1 mb-2 :after"
-						href="#"
+						href="/"
 						aria-current={pathname === "/" ? "page" : undefined}
 					>
 						<Image src="/logo.png" alt="AI" width={64} height={64} />
@@ -77,7 +77,7 @@ const Navigation = () => {
 				</li>
 			</ul>
 			<button
-				className={`w-6 h-6 absolute top-6 right-[-12px] rounded-full bg-[#402074] grid place-items-center hover:brightness-125 transition-all ${
+				className={`w-6 h-6 absolute top-6 -right-3 rounded-full bg-[#402074] grid place-items-center hover:brightness-125 transition-all ${
 					expanded ? "rotate-180" : ""
 				}`}
 				onClick={() => setExpanded(!expanded)}
