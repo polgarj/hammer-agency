@@ -12,10 +12,11 @@ const SearchForm = ({ query }: { query: string }) => {
 				name="query"
 				defaultValue={query}
 				placeholder="Search for Project"
-			/>
-			<div className="flex  items-center absolute right-1 h-full">
+        className={`${query && "has-query"}`}
+      />
+			<div className="flex  items-center absolute right-0 h-full">
 				{query && <SearchFormReset />}
-				<button type="submit" aria-label="search" className="grid place-items-center w-[36px] h-[36px] rounded-lg">
+				<button type="submit" aria-label="search" className="grid place-items-center w-[40px] h-[36px] rounded-lg">
 					<Image src="/icons/search.svg" alt="" width={16} height={16} />
 				</button>
 			</div>

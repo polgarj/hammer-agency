@@ -133,15 +133,57 @@
   /* SearchForm */
 
   .search-form {
-    @apply flex flex-nowrap relative bg-transparent border-solid border-white border-[1px] rounded-lg;
+    @apply flex flex-nowrap relative bg-transparent border-solid border-white border-[1px] rounded-lg w-[368px] h-10;
 
     input {
-      @apply w-full bg-transparent px-4 h-[40px] text-white text-[15px] placeholder:text-white placeholder:text-[15px] rounded-lg;
+      @apply w-full bg-transparent pl-4 pr-11 text-white text-[15px] placeholder:text-white placeholder:text-[15px] rounded-lg;
+
+      &.has-query {
+        @apply pr-[84px];
+      }
     }
   }
 
+  /* Filter */
+
+  .dropdown-item {
+    @apply hover:bg-[#8A38F5] text-white text-[13px] rounded-none px-4 cursor-pointer;
+
+    &[data-highlighted] {
+      @apply bg-[#8A38F5] hover:bg-[#8A38F5] text-white hover:text-white;
+    }
+  }
+
+  /* Project */
+
+  .project {
+    @apply flex flex-nowrap items-center mb-[10px] py-5 pl-10 pr-[9px] bg-[#5E404B] rounded-lg;
+  }
+
+  .project-name {
+    @apply text-white
+  }
+
+  .project-completetion {
+    @apply text-[#A08EAE] mx-4
+  }
+
+  .project-id {
+    @apply text-[#A08EAE]
+  }
+
+  .project-info {
+    @apply text-[#A08EAE] flex flex-nowrap gap-2  items-center ml-auto mr-[25px]
+  }
+
+  .project-status {
+    @apply text-white
+  }
+
+  /* Main */
+
   .main-container {
-    @apply mt-[89px] ml-[159px] mr-[120px] bg-[#2F1255] bg-opacity-30 rounded-[20px] pt-7 px-[15px] pb-[65px];
+    @apply ml-[159px] mr-[120px] bg-[#2F1255] bg-opacity-30 rounded-[20px] pt-7 px-[15px] pb-[65px];
   }
 
   .h1 {

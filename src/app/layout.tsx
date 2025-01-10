@@ -26,7 +26,9 @@ export default function RootLayout({
         <Navigation />
         <UserMenu />
       </header>
+      <div className="pt-[89px]">
         {children}
+      </div>
       </body>
     </html>
   );
