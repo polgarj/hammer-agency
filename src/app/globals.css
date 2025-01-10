@@ -5,7 +5,7 @@
 @layer utilities {
   /* Navigation */
   .navigation-item {
-    @apply text-white text-[11px] text-center flex w-full h-[75px] flex-col justify-center items-center hover:bg-[#8A38F5];
+    @apply text-white text-[11px] text-center flex w-full h-[75px] flex-col justify-center items-center hover:bg-[#8A38F5] transition-all hover:brightness-110;
 
     &[aria-current] {
       @apply bg-[#8A38F5];
