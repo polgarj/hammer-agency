@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Suppress console logs in production
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  // Cache control
   async headers() {
     return [
       {
