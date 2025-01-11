@@ -1,0 +1,58 @@
+{
+	"projects": [
+		{
+			"name": "Project 00",
+			"completion": 0,
+			"id": "2409XC2K80",
+			"info": "More info",
+			"status": "New project"
+		},
+		{
+			"name": "Project 0",
+			"completion": 0,
+			"id": "2409XC2K81",
+			"info": "More info",
+			"status": "In progress"
+		},
+		{
+			"name": "Project 1",
+			"completion": 10,
+			"id": "2409XC2K82",
+      "download": "#",
+			"info": "More info",
+			"status": "In progress"
+		},
+		{
+			"name": "Project x",
+			"completion": 50,
+			"id": "2409XC2K83",
+      "download": "#",
+			"info": "More info",
+			"status": "In progress"
+		},
+		{
+			"name": "Project 2",
+			"completion": 100,
+			"id": "2409XC2K84",
+      "download": "#",
+			"info": "More info",
+			"status": "Finished"
+		},
+		{
+			"name": "Project 3",
+			"completion": 100,
+			"id": "2409XC2K85",
+      "download": "#",
+			"info": "More info",
+			"status": "Finished"
+		},
+		{
+			"name": "Project 4",
+			"completion": 100,
+			"id": "2409XC2K86",
+      "download": "#",
+			"info": "More info",
+			"status": "Finished"
+		}
+	]
+}
