@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Filter from "@/components/Filter/Filter";
 import Project from "@/components/Project/Project";
 import SearchForm from "@/components/SearchForm/SearchForm";
@@ -11,13 +14,35 @@ type ProjectType = {
 	info: string;
 	status: string;
 };
-export default async function AllProjects({
+export default function AllProjects({
 	searchParams,
 }: {
 	searchParams: Promise<{ query?: string }>;
 }) {
-	const query = (await searchParams).query || "";
-	const projects = ProjectsData.projects;
+  const [query, setQuery] = useState<string>("");
+  const [projects, setProjects] = useState<ProjectType[]>([]);
+  const [statusFilter, setStatusFilter] = useState<string>("");
+
+  // Fetch data from ProjectsData (you could replace this with an API call)
+  useEffect(() => {
+    const fetchData = async () => {
+      const searchQuery = (await searchParams).query || "";
+      setQuery(searchQuery);
+      setProjects(ProjectsData.projects);
+    };
+
+    fetchData();
+  }, [searchParams]);
+
+  // Filter projects based on selected status
+  const filteredProjects = statusFilter
+    ? projects.filter((project: ProjectType) => project.status.toLowerCase() === statusFilter.toLowerCase())
+    : projects;
+
+  // Handle filter change
+  const handleFilterChange = (filter: string) => {
+    setStatusFilter(filter);
+  };
 
 	return (
 		<main className="main-container">
@@ -25,23 +50,25 @@ export default async function AllProjects({
 				<h1 className="h1">All projects</h1>
 				<div className="flex flex-nowrap gap-3">
 					<SearchForm query={query} />
-					<Filter />
+          <Filter onFilterChange={handleFilterChange} />
 				</div>
 			</div>
 			<div className="bg-[#30273F] pt-[42px] px-[14px] pb-[46px] rounded-xl">
-        {projects.map((project: ProjectType) => {
-          return (
-            <Project
-              key={project.id}
-              name={project.name}
-              completion={project.completion}
-              projectId={project.id}
-              download={project.download || ""}
-              info={project.info}
-              status={project.status}
-            />
-          );
-        })}
+        <div className="overflow-y-auto h-[501px]">
+          {filteredProjects.map((project: ProjectType) => {
+            return (
+              <Project
+                key={project.id}
+                name={project.name}
+                completion={project.completion}
+                projectId={project.id}
+                download={project.download || ""}
+                info={project.info}
+                status={project.status}
+              />
+            );
+          })}
+        </div>
 			</div>
 		</main>
 	);

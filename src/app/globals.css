@@ -145,9 +145,9 @@
 	/* Filter */
 
 	.dropdown-item {
-		@apply hover:bg-[#8A38F5] text-white text-[13px] rounded-none px-4 cursor-pointer;
+		@apply hover:bg-[#8A38F5] hover:brightness-125 text-white text-[13px] rounded-none px-4 cursor-pointer transition-all;
 
-		&[data-highlighted] {
+		&[data-highlighted], &[data-state="checked"] {
 			@apply bg-[#8A38F5] hover:bg-[#8A38F5] text-white hover:text-white;
 		}
 	}
@@ -155,10 +155,10 @@
 	/* Project */
 
 	.project {
-		@apply flex flex-nowrap items-center mb-[10px] py-5 pl-10 pr-[9px] rounded-lg;
+		@apply flex items-center mb-[10px] min-h-[63px] pl-10 pr-[9px] rounded-lg;
 	}
 	.project.new-project {
-		@apply bg-[#5E404B] border-solid border-[#E9335F] border-[1px];
+		@apply bg-[#5E404B] even:bg-[#50323c] border-solid border-[#E9335F] border-[1px];
 	}
 
 	.project.in-progress {
@@ -170,11 +170,11 @@
 	}
 
 	.project-name {
-		@apply text-white font-medium text-[17px];
+		@apply text-white font-medium text-[17px] min-w-[86px];
 	}
 
 	.project-completion {
-		@apply text-[#A08EAE] font-medium text-[20px] ml-[10px] mr-[24px];
+		@apply text-[#A08EAE] font-medium text-[20px] ml-[10px] mr-[24px] min-w-[50px] text-right;
 	}
 
 	.project-id {
@@ -190,7 +190,7 @@
 	}
 
 	.project-status {
-		@apply text-white text-right font-medium text-[13px] rounded-lg py-[3px] px-[10px] ml-[25px];
+		@apply text-white text-right font-medium text-[13px] rounded-lg py-[3px] px-[10px];
 	}
 
 	.project-status.new-project {
@@ -204,6 +204,18 @@
 	.project-status.finished {
 		@apply bg-[#A08EAE] text-[#30273F];
 	}
+
+  .loop-wrapper {
+    @apply !mb-[15px] !mt-0 last-of-type:!mb-[33px] bg-[#372D48] rounded-lg p-[5px];
+  }
+
+  .loop-title {
+    @apply text-white text-[11px] px-[10px] py-2 rounded-lg bg-[#9B2BF2] flex items-center;
+
+    img {
+      @apply mr-2;
+    }
+  }
 
 	/* Main */
 

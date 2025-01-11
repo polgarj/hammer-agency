@@ -7,17 +7,41 @@ import {
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const Filter = () => {
+interface FilterProps {
+	onFilterChange: (filter: string) => void;
+}
+
+const Filter = ({ onFilterChange }: FilterProps) => {
 	return (
 		<DropdownMenu>
-			<DropdownMenuTrigger className="w-10 h-10 grid place-items-center">
+			<DropdownMenuTrigger className="w-10 h-10 grid place-items-center hover:border-solid hover:border-white hover:border-[1px] rounded-lg transition-all">
 				<Image src="/icons/filter.svg" alt="" width={17} height={10} />
 			</DropdownMenuTrigger>
 			<DropdownMenuContent className="bg-[#251F30] border-none px-0 py-2">
-				<DropdownMenuItem className="dropdown-item">All</DropdownMenuItem>
-				<DropdownMenuItem className="dropdown-item">New</DropdownMenuItem>
-				<DropdownMenuItem className="dropdown-item">In progress</DropdownMenuItem>
-				<DropdownMenuItem className="dropdown-item">Finished</DropdownMenuItem>
+				<DropdownMenuItem
+					className="dropdown-item"
+					onClick={() => onFilterChange("")}
+				>
+					All
+				</DropdownMenuItem>
+				<DropdownMenuItem
+					className="dropdown-item"
+					onClick={() => onFilterChange("New project")}
+				>
+					New
+				</DropdownMenuItem>
+				<DropdownMenuItem
+					className="dropdown-item"
+					onClick={() => onFilterChange("In progress")}
+				>
+					In progress
+				</DropdownMenuItem>
+				<DropdownMenuItem
+					className="dropdown-item"
+					onClick={() => onFilterChange("Finished")}
+				>
+					Finished
+				</DropdownMenuItem>
 			</DropdownMenuContent>
 		</DropdownMenu>
 	);
