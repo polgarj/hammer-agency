@@ -142,13 +142,13 @@
 		}
 	}
 
-	/* Filter */
+	/* Dropdown */
 
 	.dropdown-item {
 		@apply hover:bg-[#8A38F5] hover:brightness-125 text-white text-[13px] rounded-none px-4 cursor-pointer transition-all;
 
 		&[data-highlighted], &[data-state="checked"] {
-			@apply bg-[#8A38F5] hover:bg-[#8A38F5] text-white hover:text-white;
+			@apply bg-[#8A38F5] hover:bg-[#8A38F5] focus:bg-[#8A38F5] focus:text-white text-white hover:text-white;
 		}
 	}
 
