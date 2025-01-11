@@ -131,7 +131,7 @@ const Project = ({
 						<div className="loop-wrapper">
 							<p className="loop-title !bg-[#8A38F5]">
 								<Image src="/icons/search.svg" alt="" width={14} height={14} />
-								Briefing loop
+								Research loop
 							</p>
 							<Select>
 								<SelectTrigger className="w-[180px]">
@@ -158,7 +158,7 @@ const Project = ({
 									width={14}
 									height={14}
 								/>
-								Briefing loop
+								Strategy loop
 							</p>
 							<Select>
 								<SelectTrigger className="w-[180px]">
@@ -185,7 +185,7 @@ const Project = ({
 									width={14}
 									height={14}
 								/>
-								Briefing loop
+								Placeholder loop
 							</p>
 							<Select>
 								<SelectTrigger className="w-[180px]">
@@ -212,11 +212,11 @@ const Project = ({
 									width={15}
 									height={15}
 								/>
-								Briefing loop
+								Presentation
 							</p>
 							<Select>
 								<SelectTrigger className="w-[180px]">
-									<SelectValue placeholder="Choose loop master" />
+									<SelectValue placeholder="Choose loop master"/>
 								</SelectTrigger>
 								<SelectContent className="bg-[#251F30] border-none px-0 py-2">
 									<SelectItem className="dropdown-item" value="name-1">
@@ -232,7 +232,7 @@ const Project = ({
 							</Select>
 						</div>
 						<button
-							className="bg-[#8A38F5] text-white text-[15px] px-4 py-2 rounded-lg !mt-0"
+							className="bg-[#8A38F5] hover:bg-[#6225e7] transition-all text-white text-[15px] px-4 py-2 rounded-lg !mt-0"
 							onClick={() => setOpenDialog(false)}
 						>
 							Confirm

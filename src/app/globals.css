@@ -155,7 +155,7 @@
 	/* Project */
 
 	.project {
-		@apply flex items-center mb-[10px] min-h-[63px] pl-10 pr-[9px] rounded-lg;
+		@apply flex items-center mb-[10px] last-of-type:mb-0 min-h-[63px] pl-10 pr-[9px] rounded-lg;
 	}
 	.project.new-project {
 		@apply bg-[#5E404B] even:bg-[#50323c] border-solid border-[#E9335F] border-[1px];
@@ -206,7 +206,7 @@
 	}
 
   .loop-wrapper {
-    @apply !mb-[15px] !mt-0 last-of-type:!mb-[33px] bg-[#372D48] rounded-lg p-[5px];
+    @apply !mb-[15px] !mt-0 last-of-type:!mb-[33px] bg-[#372D48] rounded-lg pt-[5px] px-[5px];
   }
 
   .loop-title {
