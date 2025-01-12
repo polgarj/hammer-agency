@@ -152,6 +152,18 @@
 		}
 	}
 
+	.dropdown-item .loop-master-image {
+		@apply hidden;
+	}
+
+	.select-trigger[data-placeholder] {
+		@apply text-[#A08EAE] hover:text-white px-[10px] ;
+
+		.lucide {
+			@apply block;
+		}
+	}
+
 	/* Project */
 
 	.project {

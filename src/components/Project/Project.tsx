@@ -116,13 +116,13 @@ const Project = ({
 									<SelectValue placeholder="Choose loop master" />
 								</SelectTrigger>
 								<SelectContent className="bg-[#251F30] border-none px-0 py-2">
-									<SelectItem className="dropdown-item" value="name-1">
+									<SelectItem className="dropdown-item" value="name-1" imgSrc="/loop-master.png">
 										LM Name 1
 									</SelectItem>
-									<SelectItem className="dropdown-item" value="name-2">
+									<SelectItem className="dropdown-item" value="name-2" imgSrc="/loop-master.png">
 										LM Name 2
 									</SelectItem>
-									<SelectItem className="dropdown-item" value="name-3">
+									<SelectItem className="dropdown-item" value="name-3" imgSrc="/loop-master.png">
 										LM Name 3
 									</SelectItem>
 								</SelectContent>
@@ -138,13 +138,13 @@ const Project = ({
 									<SelectValue placeholder="Choose loop master" />
 								</SelectTrigger>
 								<SelectContent className="bg-[#251F30] border-none px-0 py-2">
-									<SelectItem className="dropdown-item" value="name-1">
+									<SelectItem className="dropdown-item" value="name-1" imgSrc="/loop-master.png">
 										LM Name 1
 									</SelectItem>
-									<SelectItem className="dropdown-item" value="name-2">
+									<SelectItem className="dropdown-item" value="name-2" imgSrc="/loop-master.png">
 										LM Name 2
 									</SelectItem>
-									<SelectItem className="dropdown-item" value="name-3">
+									<SelectItem className="dropdown-item" value="name-3" imgSrc="/loop-master.png">
 										LM Name 3
 									</SelectItem>
 								</SelectContent>
@@ -165,13 +165,13 @@ const Project = ({
 									<SelectValue placeholder="Choose loop master" />
 								</SelectTrigger>
 								<SelectContent className="bg-[#251F30] border-none px-0 py-2">
-									<SelectItem className="dropdown-item" value="name-1">
+									<SelectItem className="dropdown-item" value="name-1" imgSrc="/loop-master.png">
 										LM Name 1
 									</SelectItem>
-									<SelectItem className="dropdown-item" value="name-2">
+									<SelectItem className="dropdown-item" value="name-2" imgSrc="/loop-master.png">
 										LM Name 2
 									</SelectItem>
-									<SelectItem className="dropdown-item" value="name-3">
+									<SelectItem className="dropdown-item" value="name-3" imgSrc="/loop-master.png">
 										LM Name 3
 									</SelectItem>
 								</SelectContent>
@@ -192,13 +192,13 @@ const Project = ({
 									<SelectValue placeholder="Choose loop master" />
 								</SelectTrigger>
 								<SelectContent className="bg-[#251F30] border-none px-0 py-2">
-									<SelectItem className="dropdown-item" value="name-1">
+									<SelectItem className="dropdown-item" value="name-1" imgSrc="/loop-master.png">
 										LM Name 1
 									</SelectItem>
-									<SelectItem className="dropdown-item" value="name-2">
+									<SelectItem className="dropdown-item" value="name-2" imgSrc="/loop-master.png">
 										LM Name 2
 									</SelectItem>
-									<SelectItem className="dropdown-item" value="name-3">
+									<SelectItem className="dropdown-item" value="name-3" imgSrc="/loop-master.png">
 										LM Name 3
 									</SelectItem>
 								</SelectContent>
@@ -219,13 +219,13 @@ const Project = ({
 									<SelectValue placeholder="Choose loop master"/>
 								</SelectTrigger>
 								<SelectContent className="bg-[#251F30] border-none px-0 py-2">
-									<SelectItem className="dropdown-item" value="name-1">
+									<SelectItem className="dropdown-item" value="name-1" imgSrc="/loop-master.png">
 										LM Name 1
 									</SelectItem>
-									<SelectItem className="dropdown-item" value="name-2">
+									<SelectItem className="dropdown-item" value="name-2" imgSrc="/loop-master.png">
 										LM Name 2
 									</SelectItem>
-									<SelectItem className="dropdown-item" value="name-3">
+									<SelectItem className="dropdown-item" value="name-3" imgSrc="/loop-master.png">
 										LM Name 3
 									</SelectItem>
 								</SelectContent>

@@ -5,6 +5,7 @@ import * as SelectPrimitive from "@radix-ui/react-select";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const Select = SelectPrimitive.Root;
 
@@ -19,13 +20,13 @@ const SelectTrigger = React.forwardRef<
 	<SelectPrimitive.Trigger
 		ref={ref}
 		className={cn(
-			"flex h-10 hover:text-white text-left transition-all !w-full items-center justify-between rounded-md border border-input bg-transparent px-[10px] py-2 text-[13px] text-[#A08EAE] border-none ring-offset-background placeholder:text-muted-foreground focus:outline-transparent focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+			"flex h-10 text-white text-left transition-all !w-full items-center justify-between rounded-md border border-input bg-transparent px-0 py-2 text-[13px] border-none ring-offset-background placeholder:text-muted-foreground focus:outline-transparent focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 select-trigger",
 			className
 		)}
 		{...props}
 	>
 		{children}
-		<SelectPrimitive.Icon asChild>
+		<SelectPrimitive.Icon asChild className="hidden">
 			<ChevronDown className="h-5 w-5" />
 		</SelectPrimitive.Icon>
 	</SelectPrimitive.Trigger>
@@ -112,8 +113,8 @@ SelectLabel.displayName = SelectPrimitive.Label.displayName;
 
 const SelectItem = React.forwardRef<
 	React.ElementRef<typeof SelectPrimitive.Item>,
-	React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
->(({ className, children, ...props }, ref) => (
+	React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item> & { imgSrc?: string }
+>(({ className, children, imgSrc, ...props }, ref) => (
 	<SelectPrimitive.Item
 		ref={ref}
 		className={cn(
@@ -122,7 +123,10 @@ const SelectItem = React.forwardRef<
 		)}
 		{...props}
 	>
-		<SelectPrimitive.ItemText>{children}</SelectPrimitive.ItemText>
+		<SelectPrimitive.ItemText>
+			{imgSrc && <Image className="inline-block mr-2 loop-master-image" src={imgSrc} width={25} height={25} alt="" />}
+			{children}
+		</SelectPrimitive.ItemText>
 	</SelectPrimitive.Item>
 ));
 SelectItem.displayName = SelectPrimitive.Item.displayName;
